@@ -1,0 +1,52 @@
+{
+    "0": {
+        "name": "Rick Sanchez",
+        "state": "California",
+        "company": "Cotsco",
+        "job": "Bagger",
+        "contact": "11234567"
+    },
+    "1": {
+        "name": "Eric Cartman",
+        "state": "Colorado",
+        "company": "Home Center",
+        "job": "Security",
+        "contact": "12345678"
+    },
+    "2": {
+        "name": "Bart Simpson",
+        "state": "Oregon",
+        "company": "Cotsco",
+        "job": "Security",
+        "contact": "13456789"
+    },
+    "3": {
+        "name": "Jane Doe",
+        "state": "California",
+        "company": "Wallmart",
+        "job": "Cashier",
+        "contact": "15699891"
+    },
+    "4": {
+        "name": "John Doe",
+        "state": "Colorado",
+        "company": "Target",
+        "job": "Greeter",
+        "contact": "15699891"
+    },
+    "5": {
+        "name": "John Smith",
+        "state": "Oregon",
+        "company": "Wallmart",
+        "job": "Cashier",
+        "contact": "15699891"
+    },
+    "7": {
+        "name": "Jane Smith",
+        "state": "Oregon",
+        "company": "Target",
+        "job": "Bagger",
+        "contact": "15699891"
+    }
+}
+

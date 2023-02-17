@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1,
+      shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>CO assessment</title>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      />
+    <!-- Google Fonts Roboto -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+      />
+    <!-- MDB -->
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet"
+      href="https://mdbcdn.b-cdn.net/wp-content/themes/mdbootstrap4/docs-app/css/dist/mdb5/standard/modules/0188a2dd6ac46416d1fe38c4dc421560.min.css">
+    <link rel='stylesheet' id='roboto-subset.css-css'
+      href='https://mdbcdn.b-cdn.net/wp-content/themes/mdbootstrap4/docs-app/css/mdb5/fonts/roboto-subset.css?ver=3.9.0-update.5'
+      type='text/css' media='all' />
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <link rel="stylesheet" href="css/mdb.min.css" />
+    <link rel="stylesheet" href="js/mdb.min.js" />
+    <link rel="stylesheet" href="css/mdb.rtl.min.css" />
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>
+    <script src="https://www.kryogenix.org/code/browser/sorttable/sorttable.js"></script>
+    <style>
+        @media (max-width: 576px) {
+            [id^=dpl-], [class^=dpl-], .mobile-hidden {
+                display: none!important;
+            }
+        }
+    </style>
+  </head>
+
+  <body>
+
+    <header>
+
+      <style>
+    #mdb-navbar {
+      padding-left: 240px;
+      height: 58px;
+    }
+    #mdb-5-search-container {
+      font-size: .8rem;
+      padding: 50px;
+      float: left;
+    }
+    #searchinput {
+      min-width: 230px;
+    }
+    #mdb-5-search-icon {
+      transition: color .3s ease-out;
+    }
+  .float-container {
+      border: 3px solid #fff;
+      padding: 30px;
+      width: 100%;
+  }
+.float-child_left {
+    width: 80%;
+    float: left;
+    padding: 20px;
+} 
+.float-child_right {
+  width: 20%;
+  float: left;
+  padding: 20px;
+}
+
+  </style>
+      <nav id="mdb-navbar" class="navbar fixed-top navbar-expand-xxl
+        navbar-light bg-opacity-50 shadow-4-strong" style="background-color:
+        rgb(255, 246, 254); padding-top:40px;">
+        <p class="navbar-brand" style="font-size: large; "><b>
+            Clark Outsourcing
+            assessment (Friend's list)</b> <i class="fas fa-user-friends"></i>
+        </p>
+
+      </nav>
+      <!-- <h5 class="h5 fw-bold" style="text-align:left;"></h5> -->
+    </header>
+    <style>
+</style>
+    <div class="float-container" style="margin-top: 5%;">
+      <div class="float-child_right">
+        <input type="text" id="searchinput" placeholder="Search table..."/>
+        <i class="fas fa-search"></i>
+        <!-- Button trigger modal -->
+        <br>
+        <br>
+        <button type="button" class="btn btn-primary btn-rounded"
+          data-toggle="modal" data-target="#addRow">
+          Add Row
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="addRow" tabindex="-1" role="dialog"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <!--Content-->
+            <div class="modal-content">
+              <!--Header-->
+              <div class="modal-header">
+                <button type="button" class="close btn-group btn-close"
+                  data-dismiss="modal" aria-label="Close">
+                </button>
+                <h6 class="modal-title w-100" id="modalLabel">Fill the below
+                  fields to add a new row</h6>
+              </div>
+              <!--Body-->
+              <div class="modal-body">
+                <input type="text" id="newName" name="newName" class="form-control mb-4"
+                  placeholder="Name" checked/>
+                <input type="text" id="newState" name="newState" class="form-control mb-4"
+                  placeholder="State" checked/>
+                <input type="text" id="newCompany" name="newCompany" class="form-control mb-4"
+                  placeholder="Company" checked/>
+                <input type="text" id="newJob" name="newJob" class="form-control mb-4"
+                  placeholder="Job" checked/>
+                <input type="number" id="newContact" name="newContact" class="form-control mb-4"
+                  placeholder="Contact" checked/>
+                
+              </div>
+              <!--Footer-->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary"
+                  data-dismiss="modal">Close</button>
+                <button type="submit" id="submit" class="btn btn-primary"
+                  onclick="addRow()">Submit</button>
+              </div>
+            </div>
+            <!--/.Content-->
+          </div>
+        </div>
+        <script>     
+        $('#trigger').click(function () {
+        $('#addRow').modal({show : true});
+      });</script>
+        <!-- Modal -->
+        <script>
+        function addRow() {
+          var table = document.getElementById("table");
+          var row = table.insertRow(-1);
+          var cell0 = row.insertCell(0);
+          var cell1 = row.insertCell(1);
+          var cell2 = row.insertCell(2);
+          var cell3 = row.insertCell(3);
+          var cell4 = row.insertCell(4);
+          var cell5 = row.insertCell(5);
+          var newName = document.getElementById("newName").value;
+          var newState = document.getElementById("newState").value;
+          var newCompany = document.getElementById("newCompany").value;
+          var newJob = document.getElementById("newJob").value;
+          var newContact = document.getElementById("newContact").value;
+          cell0.innerHTML = '<div><input type=\"checkbox\" class=\"form-check-input\" name=\"checkbox-tab\"></div>';
+          cell1.innerHTML = newName;
+          cell2.innerHTML = newState;
+          cell3.innerHTML = newCompany;
+          cell4.innerHTML = newJob;
+          cell5.innerHTML = newContact;
+          //close modal
+          $('#addRow').modal('hide');
+          //post data to json file
+
+          var companiesInTable = new Set();
+          var statesInTable = new Set();
+        
+          for (var i= 0; i < table.children[1].children.length; i++) {
+            //console.log(table.children[1].children.item(i).cells[2].innerText);
+            companiesInTable.add(table.children[1].children.item(i).cells[2].innerText);
+            statesInTable.add(table.children[1].children.item(i).cells[3].innerText);
+          }
+          
+          var companyCheckbox = document.getElementById("checkbox-company");
+          companyCheckbox.innerHTML = "";
+          var stateCheckbox = document.getElementById("checkbox-state");
+          stateCheckbox.innerHTML = "";
+          companiesInTable.forEach(function(value) {
+            companyCheckbox.innerHTML += "<input class=\"form-check-input\" type=\"checkbox\" value=\"" + value + "\" id=\""+ value +"\" onchange=\"check(this)\"/><label class=\"form-check-label\" for=\""+ value +"\">"+ value +"</label><br>";
+          });
+          statesInTable.forEach(function(value) {
+            stateCheckbox.innerHTML += "<input class=\"form-check-input\" type=\"checkbox\" value=\"" + value + "\" id=\""+ value +"\" onchange=\"check(this)\"/><label class=\"form-check-label\" for=\""+ value +"\">"+ value +"</label><br>";
+          });
+        }
+      </script>
+        <!-- Modal -->
+        <!-- Modal -->
+        <button type="button" class="btn btn-info btn-rounded"
+          onclick="deleteRow()">Delete Row</button>
+
+        <script>
+function deleteRow() {
+  var table = document.getElementById("table");
+  var rowCount = table.rows.length;
+  for(var i=0; i<rowCount; i++) {
+      var row = table.rows[i];
+      var chkbox = row.cells[0].childNodes[0].childNodes[0];
+      if(null != chkbox) {
+        if (chkbox.id == "selectall"){
+          continue;
+        }
+        if (chkbox.checked == true)
+        {
+          table.deleteRow(i);
+          rowCount--;
+          i--;
+        }
+      }
+  }
+}
+      </script>
+        <br>
+        <br>
+        
+        <div class="container">
+          <button class="btn-outline-light btn-rounded">Filter by State</button><br>
+          <div class="popUpFilter" id="checkbox-state">
+            <input class="form-check-input" type="checkbox" value="California"
+              id="california" name="california" onchange="check(this)" />
+            <label class="form-check-label" for="california">California</label><br>
+            <input class="form-check-input" type="checkbox" value="Oregon"
+              id="oregon" name="oregon" onchange="check(this)" />
+            <label class="form-check-label" for="oregon">Oregon</label><br>
+            <input class="form-check-input" type="checkbox" value="Colorado"
+              id="colorado" name="colorado" onchange="check(this)"/>
+            <label class="form-check-label" for="colorado">Colorado</label>
+          </div>
+        </div>
+        <br>
+        <div class="container" style="padding: 10px;">
+          <button class="btn-outline-light btn-rounded">Filter by Company</button><br>
+          <div class="popUpFilter" id="checkbox-company">
+            <input class="form-check-input" type="checkbox" value="Wallmart"
+              id="wallmart" onchange="check(this)"/>
+            <label class="form-check-label" for="wallmart">Wallmart</label><br>
+            <input class="form-check-input" type="checkbox" value="Target"
+              id="target" onchange="check(this)"/>
+            <label class="form-check-label" for="target">Target</label><br>
+            <input class="form-check-input" type="checkbox" value="Home Center"
+              id="homecenter" onchange="check(this)"/>
+            <label class="form-check-label" for="homecenter">Home Center</label>
+          </div>
+        </div>
+        <!--script for filtering through checkbox-->
+        <script>
+    function check(source) {
+      var value = source.value;
+      if(source.checked){
+        document.querySelectorAll('input[type=checkbox]').forEach(function(input) {
+          if(input.value != value){
+            input.disabled = true;
+          }
+        });
+      } else {
+        document.querySelectorAll('input[type=checkbox]').forEach(function(input) {
+          if(input.value != value){
+            input.disabled = false;
+            window.location.reload();
+          }
+        });
+      }
+      var $rows = $('#tbody tr');
+      var val = value.replace(/ +/g, ' ').toLowerCase().split(' ');
+      $rows.hide().filter(function() {
+        var text = $(this).text().replace(/\s+/g, ' ').toLowerCase();
+        var matchesSearch = true;
+        $(val).each(function(index, value) {
+          matchesSearch = (!matchesSearch) ? false : ~text.indexOf(value);
+        });
+        return matchesSearch;
+      }).show();
+    }
+  </script>
+      </div>
+      <div class="float-child_left">
+        <table class="table table-hover table-divider-color table-condensed
+          table-striped sortable" id="table"
+          style="width:100%">
+          <thead>
+            <tr style="background-color: rgb(231, 193, 228);">
+              <th><div><input type="checkbox" id="selectall"
+                    class="form-check-input"
+                    onclick="toggle(this)"></div></th>
+              <th>Name <i class="fas fa-sort"></i></th>
+              <th>State <i class="fas fa-sort"></i></th>
+              <th>Company <i class="fas fa-sort"></i></th>
+              <th>Job <i class="fas fa-sort"></i></th>
+              <th>Contact <i class="fas fa-sort"></i></th>
+            </tr>
+          </thead>
+          <tbody id="tbody">
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script>
+        $('#searchinput').keyup(function() {
+          var $rows = $('#tbody tr');
+          var val = $.trim($(this).val()).replace(/ +/g, ' ').toLowerCase().split(' ');
+        // search = ""
+          $rows.hide().filter(function() {
+            var text = $(this).text().replace(/\s+/g, ' ').toLowerCase(); // ""
+            var matchesSearch = true;
+            $(val).each(function(index, value) {
+              matchesSearch = (!matchesSearch) ? false : ~text.indexOf(value);
+            });
+            return matchesSearch;
+          }).show();
+        });
+      </script>
+    <script>
+  function toggle(source) {
+  checkboxes = document.getElementsByName('checkbox');
+  for(var i=0, n=checkboxes.length;i<n;i++) {
+    checkboxes[i].checked = source.checked;
+  }
+}
+</script>
+    <script>
+  (function() {
+    var api = "data.json";
+    $.getJSON( api, {
+      tagmode: "any",
+      format: "json"
+    })
+      .done(function(jsonData) {
+        var company = new Set();
+        var states = new Set();
+        $.each( jsonData, function( i, item ) {
+          company.add(item.company);
+          states.add(item.state);
+          $( "#tbody" ).append( "<tr><td><div><input type=\"checkbox\"            class=\"form-check-input\" name=\"checkbox\"></div></td><td>" + item.name + "</td><td>" + item.state + "</td><td>" + item.company + "</td><td>" + item.job + "</td><td>" + item.contact + "</td></tr>" );
+        });
+
+      });
+  })();
+
+  </script>
+
+  <style>
+    .footer {
+       position: fixed;
+       left: 0;
+       bottom: 0;
+       width: 100%;
+       background-color: rgb(240, 204, 229);
+       color: black;
+       text-align: center;
+    }
+    </style>
+    <div class="footer footer">
+      <b>Suvarnarekha Kollipalli</b> @ <a href="mailto:suvarnakollipalli@gmail.com">suvarnakollipalli@gmail.com</a>
+    </div>
+
+</body>
+</html>
