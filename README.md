@@ -6,9 +6,9 @@ Loom Video Link: https://www.loom.com/share/eae8087bd06a4ad39406ec78aa254ae6
 The source code is added to the GitHub as well.
 GitHub Link:
 The web page was developed using HTML, CSS, JavScript, JQuery abd MDB Bootstrap. The data is stored in a JSON file.
-Hosted on Xampp server.
+Hosted on Xampp server. All the files and folders should be copied to htdocs folder of Apache server. Then run the server and go to web browser, type "localhost/index.html". Upon enter, the web page should be displayed. 
 
-Features of the web page:
+##### Features of the web page:
     1. The web page is responsive and can be viewed on any device.
     2. The table can be sorted by clicking on the column name (all columns can be sorted).
     3. The table can be sorted both in aceending and descending order based on selected column.
