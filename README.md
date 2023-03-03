@@ -6,7 +6,7 @@ Loom Video Link: https://www.loom.com/share/eae8087bd06a4ad39406ec78aa254ae6
 The source code is added to the GitHub as well.
 GitHub Link:
 The web page was developed using HTML, CSS, JavScript, JQuery abd MDB Bootstrap. The data is stored in a JSON file.
-Hosted on Xampp server. All the files and folders should be copied to the "htdocs" folder if Xampp or "/var/www/html" folder if Lamp/Apache. Then run the server and go to web browser, type "localhost/index.html". Upon enter, the web page should be displayed. 
+Hosted on Xampp server. All the files and folders should be copied to the "htdocs" folder if Xampp or "/var/www/html" folder if Lamp/Apache. Then run the server and go to web browser, type "Localhost/CO_web_page/index.html" (in case you have moved all the code files/folders directly to htdocs or /var/www/html then type Localhost/index.html). Upon enter, the web page should be displayed. 
 
 ##### Features of the web page:
     1. The web page is responsive and can be viewed on any device.
